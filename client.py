@@ -13,10 +13,10 @@ context = zmq.Context()
 
 # Socket to send messages on
 sender = context.socket(zmq.PUSH)
-sender.connect("tcp://localhost:5557")
+sender.connect("tcp://elchudi.xen.prgmr.com:5557")
 
 subscriber = context.socket(zmq.SUB)
-subscriber.connect("tcp://localhost:5556")
+subscriber.connect("tcp://elchudi.xen.prgmr.com:5556")
 subscriber.setsockopt(zmq.SUBSCRIBE, "")
 
 
