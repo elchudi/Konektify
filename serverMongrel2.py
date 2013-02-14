@@ -19,6 +19,8 @@ while True:
     print "waiting"
     msg = receiver.recv()
     print "received"
+    publisher.send(msg)
+    """
     msg = json.loads(msg) 
     events.append(msg)
     print msg
@@ -27,4 +29,4 @@ while True:
             if(e[1]!=e2[1]):
                 if abs(e[1]-e2[1])< delta_time:
                     publisher.send(json.dumps([e[0],e2[0]]))
-
+    """
